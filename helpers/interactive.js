@@ -719,7 +719,7 @@ async function In({
               noreply = true
               return Exp.sendMessage(cht.id, {
                 image: {
-                  url: "https://files.catbox.moe/7wqoq2.jpg"
+                  url: "https://files.catbox.moe/htqlpq.jpg"
                 },
                 caption: config?.msg
               }, {
