@@ -146,7 +146,14 @@ export default async function on({ cht, Exp, store, ev, is }) {
         }
         Data.audio?.menu?.length > 0 && Exp.sendMessage(cht.id, { audio: { url: Data.audio.menu.getRandom() }, mimetype: "audio/mpeg" }, { quoted: cht })
     })
-    
+    > ev.on({ 
+  cmd: ['owner'], 
+  listmenu: ['owner'],
+  tag: 'others'
+}, async({ cht })=> {
+  await Exp.sendContacts(cht, owner.map(a => String(a)))
+   cht.reply(`Hai kak itu owner ${botname} ya`)
+})
     ev.on({ 
         cmd: ['reaction','menureaction','reactionmenu'],
         listmenu: ['reactionmenu'],
